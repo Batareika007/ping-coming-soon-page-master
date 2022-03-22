@@ -1,0 +1,142 @@
+@import 'normalize';
+@import 'global';
+@import 'colors';
+
+.hide-scroll {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Libre Franklin',
+        sans-serif;
+    font-size: 20px;
+}
+
+/* container max width -------------------  */
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 5%;
+}
+
+header {
+    padding: 3rem 0 1rem 0;
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+
+    h1 {
+        font-weight: 300;
+        font-size: 2rem;
+        color: $text_collor;
+        padding-bottom: 1rem;
+
+        strong {
+            font-weight: 700;
+            color: $heading_color;
+        }
+    }
+}
+
+.form {
+    padding-bottom: 5rem;
+
+    form {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+
+        input {
+            border-radius: 2rem;
+            line-height: 4rem;
+            padding: 0 2rem;
+        }
+
+        input[type="email"] {
+            border: 1px solid $placeholde_border;
+            flex: 1 1 60%;
+
+            &::placeholder {
+                color: $placeholde_border;
+                // font-size: 1.5em;
+            }
+
+        }
+
+        input[type="submit"] {
+            flex: 1 1 20%;
+            color: #fff;
+            font-weight: 600;
+            background-color: $button_color;
+            cursor: pointer;
+        }
+    }
+}
+
+.links,
+.footer-cop {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.image {
+    margin-bottom: 5rem;
+}
+
+.links {
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+
+    a {
+        border: 1px solid $button_color;
+        border-radius: 50%;
+        padding: 1rem;
+
+        svg {
+            height: 24px;
+            width: 24px;
+
+            path {
+                fill: $button_color;
+            }
+        }
+
+        &:hover {
+            background-color: $button_color;
+
+            path {
+                fill: #fff;
+            }
+        }
+
+    }
+}
+
+
+.footer-cop {
+    color: $text_collor;
+    font-size: 1rem;
+}
