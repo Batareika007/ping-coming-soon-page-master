@@ -32,6 +32,7 @@
     <header>
       <div class="logo flex-center"> <a href="../"> <img src="images/logo.svg" alt="logo"></a></div>
     </header>
+
     <main>
       <div class="heading">
         <h1>
@@ -44,8 +45,12 @@
       <div class="form container">
 
         <form action="#" method="post">
-          <input type="email" name="" id="email" placeholder="Your email address..." required>
+
+          <input type="email" name="fname" id="fname" class="err" placeholder="Your email address..." required>
           <input type="submit" value="Notify Me">
+          <i id="cname" class="emsg">
+            Please provide a valid email address
+          </i>
         </form>
       </div>
       <div class="image container">
@@ -83,11 +88,40 @@
     <footer>
       <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Alexei</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/Batareika007" target="_blank">Alexei</a>.
       </p>
     </footer>
   </div>
 
+  <!-- script -->
+
+
+  <!-- (C) FORM CHECK 
+
+  <script>
+    function check() {
+
+      var valid = true,
+        error = "",
+        field = "";
+
+
+      field = document.getElementById("fname");
+      error = document.getElementById("cname");
+      if (!field.checkValidity()) {
+        valid = false;
+        field.classList.add("err");
+        error.innerHTML = "Please provide a valid email address";
+      } else {
+        field.classList.remove("err");
+        error.innerHTML = "";
+      }
+
+      
+      return valid;
+    }
+  </script>
+-->
 
 </body>
 

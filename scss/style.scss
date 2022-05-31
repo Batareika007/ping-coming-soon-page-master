@@ -45,21 +45,32 @@ header {
 .heading {
     text-align: center;
     padding: 2rem 0;
-
     h1 {
         font-weight: 300;
         font-size: 4rem;
         color: $text_collor;
         padding-bottom: 1rem;
-
-        strong {
-            font-weight: 700;
-            color: $heading_color;
+        
+            @media screen and (max-width:768px) {
+                font-size: 1.5rem;
+            }
+            
+            
+            strong {
+                font-weight: 700;
+                color: $heading_color;
+            }
         }
+        p{
+            @media screen and (max-width:768px) {
+                font-size: 1rem;
+            }
+            
     }
 }
 
 .form {
+    position: relative;
     padding-bottom: 5rem;
 
     form {
@@ -67,19 +78,28 @@ header {
         gap: 1.5rem;
         flex-wrap: wrap;
 
+        
         input {
             border-radius: 2rem;
             line-height: 4rem;
             padding: 0 2rem;
+            @media screen and (max-width:768px) {
+                padding: 0 1rem;
+                line-height: 3rem;
+            }
         }
 
         input[type="email"] {
             border: 1px solid $placeholde_border;
             flex: 1 1 60%;
 
+            @media screen and (max-width:536px) {
+                // flex: 0 ;
+                order: 1;
+            }
+
             &::placeholder {
                 color: $placeholde_border;
-                // font-size: 1.5em;
             }
 
         }
@@ -89,10 +109,15 @@ header {
             color: #fff;
             font-weight: 600;
             background-color: $button_color;
+            box-shadow: 0px 5px 20px 2px hsla(223, 87%, 63%, 0.517);
             cursor: pointer;
-            
-            &:hover{
-               background-color:  hsla(223, 87%, 63%, 0.724);
+
+            @media screen and (max-width:536px) {
+                order: 3;
+            }
+
+            &:hover {
+                background-color: hsla(223, 87%, 63%, 0.724);
             }
         }
     }
@@ -150,6 +175,29 @@ header {
     margin-bottom: 2rem;
 }
 
-footer{
+footer {
     padding-bottom: 1rem;
+}
+
+// form errors messages 
+input[type="email"] {
+    border: 2px solid $error_color;
+}
+
+.emsg {
+    // display: none;
+    // margin-top: 1rem;
+    margin-left: 2rem;
+    position: relative;
+    color: $error_color;
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: 400;
+    width: 100%;
+
+    @media screen and (max-width:536px) {
+        order: 2;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
