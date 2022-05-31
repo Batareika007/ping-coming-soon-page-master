@@ -527,6 +527,12 @@ header {
   padding-bottom: 5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .form {
+    padding-bottom: 2rem;
+  }
+}
+
 .form form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,7 +555,7 @@ header {
   }
 }
 
-.form form input[type="email"] {
+.form form .input-email {
   border: 1px solid #c2d3ff;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 60%;
@@ -557,27 +563,31 @@ header {
 }
 
 @media screen and (max-width: 536px) {
-  .form form input[type="email"] {
+  .form form .input-email {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
 }
 
-.form form input[type="email"]::-webkit-input-placeholder {
+.form form .input-email::-webkit-input-placeholder {
   color: #c2d3ff;
 }
 
-.form form input[type="email"]:-ms-input-placeholder {
+.form form .input-email:-ms-input-placeholder {
   color: #c2d3ff;
 }
 
-.form form input[type="email"]::-ms-input-placeholder {
+.form form .input-email::-ms-input-placeholder {
   color: #c2d3ff;
 }
 
-.form form input[type="email"]::placeholder {
+.form form .input-email::placeholder {
   color: #c2d3ff;
+}
+
+.form form .error {
+  border: 2px solid #ff5263;
 }
 
 .form form input[type="submit"] {
@@ -657,10 +667,6 @@ header {
 
 footer {
   padding-bottom: 1rem;
-}
-
-input[type="email"] {
-  border: 2px solid #ff5263;
 }
 
 .emsg {

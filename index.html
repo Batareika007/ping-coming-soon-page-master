@@ -44,12 +44,12 @@
       </div>
       <div class="form container">
 
-        <form action="#" method="post">
+        <form method="post" action="javascript:void(0);" onsubmit="return check()" novalidate>
 
-          <input type="email" name="fname" id="fname" class="err" placeholder="Your email address..." required>
+          <input type="email" name="fname" id="fname" class="input-email" placeholder="Your email address..." required>
           <input type="submit" value="Notify Me">
           <i id="cname" class="emsg">
-            Please provide a valid email address
+            <!-- Please provide a valid email address -->
           </i>
         </form>
       </div>
@@ -96,7 +96,7 @@
   <!-- script -->
 
 
-  <!-- (C) FORM CHECK 
+  <!-- (C) FORM CHECK  -->
 
   <script>
     function check() {
@@ -110,18 +110,20 @@
       error = document.getElementById("cname");
       if (!field.checkValidity()) {
         valid = false;
-        field.classList.add("err");
+        field.classList.add("error");
+        // field.classList.remove("input-email");
         error.innerHTML = "Please provide a valid email address";
       } else {
-        field.classList.remove("err");
+        // field.classList.add("input-email");
+        field.classList.remove("error");
         error.innerHTML = "";
       }
 
-      
+
       return valid;
     }
   </script>
--->
+
 
 </body>
 
