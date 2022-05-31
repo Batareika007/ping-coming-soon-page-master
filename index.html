@@ -54,7 +54,7 @@
         </form>
       </div>
       <div class="image container">
-        <img src="/images/illustration-dashboard.png" alt="illustration-dashboard">
+        <img src="images/illustration-dashboard.png" alt="illustration-dashboard">
       </div>
       <div class="links flex-center">
         <a class="flex-center" href="#">
@@ -93,10 +93,7 @@
     </footer>
   </div>
 
-  <!-- script -->
-
-
-  <!-- (C) FORM CHECK  -->
+  <!--script FORM CHECK  -->
 
   <script>
     function check() {
@@ -111,10 +108,8 @@
       if (!field.checkValidity()) {
         valid = false;
         field.classList.add("error");
-        // field.classList.remove("input-email");
         error.innerHTML = "Please provide a valid email address";
       } else {
-        // field.classList.add("input-email");
         field.classList.remove("error");
         error.innerHTML = "";
       }
